@@ -2,13 +2,171 @@
 <html>
 <head>
   <title>Professionalqa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="main-nav-container">
+    <div class="main-header top-scroll-menu">
+      <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid-s"> 
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-pro-navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a href="/"><%= image_tag("pro-icon-logo.png", border:0, alt: "ProfessionalQA.com", class: "pro-icon-box") %> </a> </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="top-pro-navbar-collapse">
+                 <!--<div class="pro-search-box input-group">
+                  <input type="text" name="search" id="search" disabled placeholder="Search for..." class="form-control" />
+                  <span class="input-group-btn input-group-btn-search">
+                  <input alt="Search icon" type="image" src="assets/images/search-icon.png" />
+                  </span>
+               </div>-->
+                <div class="social-icons navbar-nav navbar-right"> <%= link_to image_tag("fb.png", alt: "Facebook", title: "Facebook"), href: "https://www.facebook.com/qa.professional", target: "_blank" %><%= link_to image_tag("tt.png", alt:"Twitter", title:"Twitter"), target:"_blank", href:"https://twitter.com/ProfessionalQA" %> <%= link_to image_tag("lin.png", alt:"LinkedIn", title:"LinkedIn"), target:"_blank", href:"https://www.linkedin.com/in/professionalqa" %> <%= link_to image_tag("gp.png", alt:"Google Plus", title:"Google Plus"), target:"_blank", href:"https://plus.google.com/u/0/109878639147270322851/posts" %> <%= link_to image_tag("pin.png", alt:"Pintrest", title:"Pintrest"), target:"_blank", href:"http://www.stumbleupon.com/stumbler/professionalqa" %> <%= link_to image_tag("su.png", alt:"Stumble Upon", title:"Stumble Upon"), target:"_blank", href:"https://www.linkedin.com/in/professionalqa" %></div>
+              </div>
+              <!-- /.navbar-collapse --> 
+            </div>
+            <!-- /.container-fluid --> 
+        </nav>
+      </div>
+    </div>
+</div>
 
-<%= yield %>
+<div class="container">
+  <div class="second-pro-nov">
+    <ul class="nav nav-tabs pull-right">
+      <li role="presentation"><a href="/">QA</a></li>
+      <li role="presentation"><a href="contact-us">Contact Us</a></li>
+      <li role="presentation"><a href="about-us">About Us</a></li>
+    </ul>
+  </div>
+</div>
+<!--End Header part-->
 
+
+<!--Start Content part-->
+<div class="container content-area">
+	<div class="row">
+    <div class="col-sm-12">
+	<!--Top Ads one line ads-->
+    <!--#include file="includes/onelin-ads.html" -->
+    <!--Top Ads one line ads-->
+    </div>
+    </div>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="pro-content-box">
+        <!-- START./.blog-post -->
+        	<%= yield %>
+        <!-- END./.blog-post -->
+      </div>      
+    </div>
+    
+    <!--right side bar section -->   
+    <div class="col-sm-3">
+    	<!--#include file="includes/right-sidebar.html" -->
+    </div>
+    <!--End right side bar section -->
+  </div>
+</div>
+<!--End Content part-->
+
+<!--Start footer part-->
+<div class="footer">
+  <div class="container">
+    <div class="footer-carousel">
+      <div class="footer-head">POSTS PROFESSIONAL QA.COM</div>
+      <!-- Controls -->
+      <div class="ftr-carousel-btn"> <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+      <div id="carousel-example-generic" class="carousel slide" data-interval="false" data-ride="carousel"> 
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <ul class="ftr-post-links">
+              <li><a href="ab-testing" title="AB Testing">AB Testing</a></li>
+              <li><a href="accessibility-testing" title="Accessibility Testing">Accessibility Testing </a></li>
+              <li><a href="alpha-testing" title="Alpha Testing">Alpha Testing</a></li>
+              <li><a href="beta-testing" title="Beta Testing">Beta Testing</a></li>
+              <li><a href="dynamic-testing" title="Dynamic Testing">Dynamic Testing</a></li>
+              <li><a href="functional-testing" title="Functional testing">Functional testing</a></li>
+              <li><a href="globalization-and-localization-testing" title="Globalization and Localization testing">Globalization and Localization testing</a></li>
+              <li><a href="installation-testing" title="Installation testing">Installation testing</a></li>
+              <li><a href="non-functional-testing" title="Non-functional testing">Non-functional testing</a></li>
+              <li><a href="sanity-testing" title="Sanity Testing">Sanity Testing</a></li>
+              <li><a href="smoke-testing" title="Smoke Testing">Smoke Testing</a></li>
+              <li><a href="static-testing" title="Static testing">Static testing</a></li>
+              <li><a href="system-testing" title="System Testing">System Testing</a></li>
+              <li><a href="agile-testing" title="Agile Testing">Agile Testing</a></li>
+              <li><a href="gui-testing" title="GUI Testing">GUI Testing</a></li>
+              <li><a href="test-data-and-its-importance" title="Test data and its importance">Test data and its importance</a></li>
+              <li><a href="user-acceptance-testing" title="User Acceptance Testing">User Acceptance Testing</a></li>
+              <li><a href="exploratory-testing" title="Exploratory Testing">Exploratory Testing</a></li>
+              <li><a href="data-warehousing-testing" title="Data Warehousing Testing">Data Warehousing Testing</a></li>
+              <li><a href="adhoc-testing" title="ADHOC Testing">ADHOC Testing</a></li>
+            </ul>
+          </div>
+          <div class="item">
+            <ul class="ftr-post-links">
+              <li><a href="mobile-app-testing" title="Mobile App Testing">Mobile App Testing</a></li>
+              <li><a href="content-testing" title="Content Testing">Content Testing</a></li>
+              <li><a href="non-functional-testing" title="Non-functional testing">Non-functional testing</a></li>
+              <li><a href="stress-testing" title="Stress Sesting">Stress Testing</a></li>
+              <li><a href="software-development-life-cycle" title="Software Development Life Cycle">Software Development Life Cycle</a></li>
+              <li><a href="acceptance-testing" title="Acceptance Testing">Acceptance Testing</a></li>
+              <li><a href="performance-testing" title="Performance testing">Performance testing</a></li>
+              <li><a href="conformance-testing" title="conformance testing">Conformance testing</a></li>
+              <li><a href="software-quality-assurance" title="Software Quality Assurance">Software Quality Assurance</a></li>
+              <li><a href="use-case-testing" title="Use Case Testing">Use Case Testing</a></li>
+              <li><a href="test-strategy" title="Test Strategy">Test Strategy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-second">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-6 col-lg-6">
+          <div class="footer-second-box follow-us-box">
+            <h1>Follow Us:</h1>
+            <div class="social-icons navbar-nav navbar-right"> <%= link_to image_tag("fb-ftr.png", alt: "Facebook", title: "Facebook"), href: "https://www.facebook.com/qa.professional", target: "_blank" %><%= link_to image_tag("tt-ftr.png", alt:"Twitter", title:"Twitter"), target:"_blank", href:"https://twitter.com/ProfessionalQA" %> <%= link_to image_tag("lin-ftr.png", alt:"LinkedIn", title:"LinkedIn"), target:"_blank", href:"https://www.linkedin.com/in/professionalqa" %> <%= link_to image_tag("gp-ftr.png", alt:"Google Plus", title:"Google Plus"), target:"_blank", href:"https://plus.google.com/u/0/109878639147270322851/posts" %> <%= link_to image_tag("pin-ftr.png", alt:"Pintrest", title:"Pintrest"), target:"_blank", href:"http://www.stumbleupon.com/stumbler/professionalqa" %> <%= link_to image_tag("su-ftr.png", alt:"Stumble Upon", title:"Stumble Upon"), target:"_blank", href:"https://www.linkedin.com/in/professionalqa" %> <%= link_to image_tag("rss.png", alt:"Stumble Upon", title:"Stumble Upon"), target:"_blank", href:"#" %></div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6 col-lg-6">
+          <div class="footer-second-box ftr-signup-box">
+            <p>We deliver. Get the best of <br />
+              <a href="/">Professional QA</a> in your inbox.</p>
+            <div class="clearfix">
+              <form class="navbar-form navbar-left" role="search">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="ftr-user-email" placeholder="Enter your email"><span class="input-group-btn"><button type="submit" id="footer-form" class="btn btn-danger">Submit</button></span></div>
+              </form>
+            </div>
+            <p>You can opt-out at any time. See our <a href="privacy-policy">privacy policy</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">  
+  <div class="container">
+    	<ul class="nav navbar-nav navbar-right">
+          <li><a href="about-us">About Us</a></li>
+          <li><a href="privacy-policy">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions">Terms And Conditions</a></li>
+          <li><a href="disclaimer">Disclaimer</a></li>
+          <li><a href="sitemap">Sitemap</a></li>
+          <li><a href="contact-us">Contact Us</a></li>
+        </ul>
+        <div class="ctext">&copy; 2016 ProfessionalQA.com - All rights reserved.</div>
+      </div>
+  </div>
+</div>
+<!--End footer part-->
 </body>
 </html>
