@@ -1,19 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="col-sm-9">
+  <div class="pro-content-box">
+    <h1><%= @post.title %></h1>
+    <p class="blog-post-meta"><%= @post.date %> <br />
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<div class="addthis_native_toolbox"></div>
+        <hr>
+    </p>
+    <div>
+    	<%= simple_format(@post.body) %>
+    </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+  </div>      
+</div>
 
-<p>
-  <strong>Body:</strong>
-  <%= simple_format(@post.body) %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @post.date %>
-</p>
+<!--right side bar section -->   
+<div class="col-sm-3">
+	<%= render 'shared/right_sidebar' %>
+</div>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

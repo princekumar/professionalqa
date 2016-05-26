@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+
+  root 'posts#index'  
+  
+  devise_for :users
   
 #resources :pages #only: [:home, :contactUs, :aboutUs, :privacyPolicy, :termsAndCoditions, :disclaimer, :sitemap] do
-  get 'pages/index', path: "" #to: 'pages#home'
+  get 'pages/index', path: "/index" #to: 'pages#home'
   get 'pages/contactUs', path: '/contact-us'  #to: 'pages#contactUs' as: 'contact-us'
   get 'pages/aboutUs', path: '/about-us' #to: 'pages#aboutUs' as: 'about-us'
   get 'pages/privacyPolicy', path: '/privacy-policy' #to: 'pages#privacyPolicy' as: 'pages#privacyPolicy'
@@ -10,13 +14,13 @@ Rails.application.routes.draw do
   get 'pages/sitemap', path: '/sitemap'  #to: 'pages#sitemap' as: '/sitemap'
 #end
 
+
   resources :posts #, path: "", only: [:index, :new, :create]
   resources :posts #, path: "", except: [:index, :new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
