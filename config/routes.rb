@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
   root 'posts#index'  
   
   devise_for :users
@@ -14,9 +15,11 @@ Rails.application.routes.draw do
   get 'pages/sitemap', path: '/sitemap'  #to: 'pages#sitemap' as: '/sitemap'
 #end
 
-
-  resources :posts #, path: "", only: [:index, :new, :create]
-  resources :posts #, path: "", except: [:index, :new, :create]
+  
+  resources :posts do #, path: "", only: [:index, :new, :create]
+    resources :subscribes
+  end 
+  #resources :posts #, path: "", except: [:index, :new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

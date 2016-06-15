@@ -10,18 +10,33 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="row">
+  <div class="col-sm-6 field form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="col-sm-6 field form-group">
+    <%= f.label :shortdescription %><br>
+    <%= f.text_area :shortdescription, class: "form-control" %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 field form-group">
+    <%= f.label :keywords %><br>
+    <%= f.text_area :keywords, class: "form-control" %>
+  </div>
+  <div class="col-sm-6 field form-group">
+    <%= f.label :metadescription %><br>
+    <%= f.text_area :metadescription, class: "form-control" %>
+  </div>
+</div>
+  <div class="field form-group">
     <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.cktext_area :body, class: "form-control", :ckeditor => {:uiColor => '#AADC6E'} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%= f.date_select :date, class: "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit %>

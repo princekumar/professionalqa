@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Professionalqa</title>
+  <title><%= headtitle %></title>
+  <meta name="keywords" content="<%= meta_keywords %>" /> 
+  <meta name="description" content="<%= meta_description %>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56b85e5005ea5817"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -60,8 +63,7 @@
   </div>
   <% if notice %>
     <div class="alert alert-info" role="alert">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <p class="notice"><%= notice %> <%= alert %></p>
     </div>
  <% end %>
  <% if alert %>
@@ -81,7 +83,7 @@
     <!--Top Ads one line ads-->
     </div>
     </div>
-  <div class="row">
+  <div>
     <%= yield %>   
   </div>
 </div>

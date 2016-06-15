@@ -1,16 +1,26 @@
+<% headtitle @post.title %>
+<% meta_keywords @post.keywords %>
+<% meta_description @post.metadescription %>
+
 <div class="col-sm-9">
   <div class="pro-content-box">
     <h1><%= @post.title %></h1>
-    <p class="blog-post-meta"><%= @post.date %> <br />
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-		<div class="addthis_native_toolbox"></div>
-        <hr>
+    <p class="blog-post-meta"><%= @post.date.month %> <%= @post.date.day %>, <%= @post.date.year %> <br />
+    <div class="addthis_native_toolbox"></div>
+    <hr>
+    <div class="fb-share-button" data-href="https://www.facebook.com/ThinkSysInc/" data-layout="button_count"></div>      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
     </p>
     <div>
     	<%= simple_format(@post.body) %>
     </div>
-
   </div>      
+  <% if user_signed_in? %>
+  <div>
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Back', posts_path %>
+  </div>
+  <% end %>
 </div>
 
 <!--right side bar section -->   
@@ -18,5 +28,3 @@
 	<%= render 'shared/right_sidebar' %>
 </div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
