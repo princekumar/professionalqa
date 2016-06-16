@@ -25,14 +25,3 @@ module Professionalqa
   end
 end
 
-# in config/application.rb
-
-# We need to Configure CKEditor here so that we can reduce asset pre-compile
-# time while still not initializing the whole application.
-module AssetsInitializers
-  class Railtie < Rails::Railtie
-    initializer "assets_initializers.initialize_rails", :group => :assets do |app|
-      require "#{Rails.root}/config/initializers/ckeditor.rb"
-    end
-  end
-end
