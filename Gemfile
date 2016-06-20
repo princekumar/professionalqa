@@ -37,6 +37,7 @@ gem 'friendly_id'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'paperclip'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
