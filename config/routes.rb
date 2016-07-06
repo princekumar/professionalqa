@@ -17,8 +17,8 @@ Rails.application.routes.draw do
   
   resources :subscribers, only: [:new, :create]
 
-  resources :posts   #, path: "", only: [:index, :new, :create]
-  #resources :posts #, path: "", except: [:index, :new, :create]
+  resources :posts, path: "", only: [:index, :new, :create]
+  resources :posts, path: "", except: [:index, :new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
