@@ -1,11 +1,20 @@
 <div class="alert alert-info subscribe-box">
 	<h3>Subscribe Pro QA</h3>
-    <div class="input-group">
-    	<%= form_for(@subscriber) do |f| %>
-    		<%= f.text_field :title, class: "form-control", placeholder: "Enter your email" %>
-    		<span class="input-group-btn"><%= f.submit, class: "btn btn-primary" %></span>
-    	<% end %>
-    	<input type="text" id="subscribe-input" class="form-control" placeholder="Enter your email">
-    	<span class="input-group-btn"><button id="subscribe-button" class="btn btn-primary" type="button">Submit <span class="collapse subscribe-spin glyphicon glyphicon-refresh glyphicon-spin"></span></button></span>
-    </div>
+    <%= form_for(@subscriber) do |f| %>
+    	<% if @subscriber.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+
+	      <ul>
+	      <% @subscriber.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	    <div class="input-group">
+	    	<%= f.text_field :subemail, class: "form-control", placeholder: "Enter your email" %>
+	    	<span class="input-group-btn"><%= f.submit 'Submit', class: 'btn btn-primary'  %></span>
+	    </div>
+    <% end %>    
 </div>

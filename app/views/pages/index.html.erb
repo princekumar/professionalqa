@@ -73,19 +73,9 @@
         <hr>
         <div class="only-for-tweets"><div class="sidebar-module">
                 <ol class="list-unstyled list-group">
-                    <li class="list-group-item"><a href="reliability-testing" title="Reliability Testing ">Reliability Testing </a></li>
-                    <li class="list-group-item"><a href="loop-testing" title="Loop Testing">Loop Testing</a></li>
-                    <li class="list-group-item"><a href="manual-testing" title="Manual Testing">Manual Testing</a></li>
-                    <li class="list-group-item"><a href="protocol-testing" title="Protocol Testing">Protocol Testing</a></li>
-                    <li class="list-group-item"><a href="test-basis" title="Test Basis">Test Basis</a></li>
-                    <li class="list-group-item"><a href="component-testing" title="Component Testing">Component Testing</a></li>
-                    <li class="list-group-item"><a href="test-scenario" title="Test Scenario">Test Scenario</a></li>
-                    <li class="list-group-item"><a href="test-suite" title="Test Suite">Test Suite</a></li>
-                    <li class="list-group-item"><a href="monkey-testing" title="Monkey Testing">Monkey Testing</a></li>
-                    <li class="list-group-item"><a href="mobile-app-testing" title="Mobile App Testing">Mobile App Testing</a></li>
-                    <li class="list-group-item"><a href="content-testing" title="Content Testing">Content Testing</a></li>
-                    <li class="list-group-item"><a href="non-functional-testing" title="Non-functional testing">Non-functional testing</a></li>
-                    <li class="list-group-item"><a href="stress-testing" title="Stress Sesting">Stress Testing</a></li>
+                    <% @posts.each do |post| %>
+                      <li class="list-group-item"><a href="stress-testing" title="Stress Sesting"><%=link_to post.title, post %></li>
+                    <% end %>
                 </ol>
               </div> 
         </div>

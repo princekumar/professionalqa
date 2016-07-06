@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'pages#index'  
+  root 'pages#index'
   
   devise_for :users
   
