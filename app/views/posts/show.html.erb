@@ -5,7 +5,7 @@
 <div class="col-sm-9">
   <div class="pro-content-box">
     <h1><%= @post.title %></h1>
-    <p class="blog-post-meta"><%= @post.date.month %> <%= @post.date.day %>, <%= @post.date.year %> <br />
+    <p class="blog-post-meta"><%= @post.date.strftime("%B") %> <%= @post.date.day %>, <%= @post.date.year %> <br />
     <div class="addthis_native_toolbox"></div>
     <hr>
     <div class="fb-share-button" data-href="https://www.facebook.com/ThinkSysInc/" data-layout="button_count"></div>      
