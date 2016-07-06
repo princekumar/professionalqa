@@ -12,6 +12,18 @@ group :development do
 	gem 'pg'
 end
 
+# Adding search bar in posts pages
+gem 'sunspot_rails' #, github: "betam4x/sunspot" # , '2.1.1'
+
+group :production do
+	gem 'sunspot_solr' #, github: "betam4x/sunspot" # '2.1.1'
+end
+group :development do
+	gem 'sunspot_solr' #, github: "betam4x/sunspot" # '2.1.1'
+end
+
+gem 'progress_bar'
+
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
