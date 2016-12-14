@@ -25,7 +25,27 @@
 
 <!--right side bar section -->   
 <div class="col-sm-3">
-	<%= render 'subscribe_mailer/right_sidebar' %>
+	<div class="alert alert-info subscribe-box">
+  <h3>Subscribe Pro QA</h3>
+    <%= form_for([@post, Subscriber.build) do |f| %>
+      <% if @subscriber.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+
+        <ul>
+        <% @subscriber.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+      <div class="input-group">
+        <%= f.text_field :subemail, class: "form-control", placeholder: "Enter your email" %>
+        <span class="input-group-btn"><%= f.submit 'Submit', class: 'btn btn-primary'  %></span>
+      </div>
+    <% end %>    
+</div>
+
   <hr>
   <% @posts.each do |post| %>
     <li class="list-group-item"><a href="stress-testing" title="Stress Sesting"><%=link_to post.title, post %></li>

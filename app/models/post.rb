@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :user
+  has_many :subscriber
 
   extend FriendlyId
   friendly_id :title, use: :slugged
@@ -14,10 +15,6 @@ class Post < ActiveRecord::Base
   validates :metadescription, presence: true
   validates :body, presence: true
   validates :date, presence: true
-
-  searchable do
-    text :title, :shortdescription, :keywords, :body, :body, :date
-  end
 
   def to_s 
   	"#{title} #{shortdescription} #{keywords} #{metadescription} #{body} #{date}"

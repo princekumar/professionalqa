@@ -4,25 +4,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
-group :production do
-	gem 'pg'
-end
-
-group :development do
-	gem 'pg'
-end
+gem 'pg'
 
 # Adding search bar in posts pages
-gem 'sunspot_rails' #, github: "betam4x/sunspot" # , '2.1.1'
-
-group :production do
-	gem 'sunspot_solr' #, github: "betam4x/sunspot" # '2.1.1'
-end
-group :development do
-	gem 'sunspot_solr' #, github: "betam4x/sunspot" # '2.1.1'
-end
-
-gem 'progress_bar'
+#gem 'sunspot_rails' #, github: "betam4x/sunspot" # , '2.1.1'
+#gem 'sunspot_solr' #, github: "betam4x/sunspot" # '2.1.1'
+#gem 'progress_bar'
 
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'

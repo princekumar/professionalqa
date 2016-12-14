@@ -1,5 +1,6 @@
 class Subscriber < ActiveRecord::Base
-
+attr_accesssible :subemail, :post
+belongs_to :post
 
 validates :subemail, 
 			presence: true,

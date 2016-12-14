@@ -1,9 +1,7 @@
 class SubscribersController < ApplicationController
-	def new 
-		@subscriber = Subscriber.new
-	end
 	def create
-		@subscriber = Subscriber.new(subscriber_params)
+		@subscriber = Post.find(params[:post_id])
+		@subscriber = Post.Subscriber.create(subscriber_params)
 			
 		 respond_to do |format|
 	      if @subscriber.save
@@ -19,11 +17,11 @@ class SubscribersController < ApplicationController
 	private
     # Use callbacks to share common setup or constraints between actions.
     def set_subscriber
-      @subscriber = Subscriber.find(params[:id])
+      @subscriber = Post.Subscriber.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subscriber_params
-      params.require(:subscriber).permit(:subemail)
+      params.require(:subscriber).permit(:subemail, :post_id)
     end
 end

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :subemail]
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
@@ -8,6 +8,8 @@ class PostsController < ApplicationController
 
   def show
     @posts = Post.all
+
+    @post = Post.friendly.subscribers.build
   end
 
   def new
